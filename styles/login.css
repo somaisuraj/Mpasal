@@ -1,0 +1,50 @@
+h1{
+	font-size:60px;
+	color:blue;
+}
+#cointainer{
+	border: 1px solid black;
+	width:900px;
+	margin-left:150px;
+	text-align:center;
+	padding:20px;
+	
+}
+#buyer{
+width:800px;
+height:40px;
+font-size:30px;
+margin-top:50px;
+margin-bottom:50px;
+}
+#buyer li{
+	width:300px;
+	height:40px;
+	line-height:40px;
+	list-style:none;
+	background-color:orange;
+	color:blue;
+	border:2px solid white;``
+}
+#home{
+	clear:both;
+}
+#buyer li:first-child{
+float:right;
+
+	
+}
+#buyer a{
+	text-decoration:none;
+	display:block;
+}
+#buyer a:hover{
+	background-color:blue;
+	color:white;
+}
+#home{
+	font-size:25px;
+	text-decoration:none;
+	margin-top:50px;
+	margin-bottom:50px;
+}

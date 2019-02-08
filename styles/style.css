@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+}
+#container{
+  width: 100vw;
+}
+div{
+  text-align: center;
+}
+
+#container li {
+    list-style: none;
+    text-decoration: none;
+}
+#container li a {
+  text-decoration: none;
+}
+h3{
+  text-align:center;
+  text-decoration:none;
+}
+.navbar{
+background-color:lightgreen;
+display: flex;
+align-items: center;
+justify-content: space-around;
+position:fixed;
+top:0;
+left:0;
+height: 30px;
+width: 100vw;
+}
+
+.navbar li{
+/*width:120px;
+height:40px;
+display:inline-block;
+text-align:center;
+margin-left:40px;
+line-height: 40px;*/
+}
+.navbar li a{
+  color:black;
+
+}
+
+.bodynav {
+  background: red;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  margin-top: 30px;
+  padding: 10px;
+  width: 100vw;
+}
+
+.bodynav .left {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.bodynav .left li {
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  padding: 1px;
+}
+
+.bodynav .center {
+  border: 1px solid black;
+  width: 50%;
+}
+.bodynav .right {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25%;
+}
+
+.bodynav .right .tr {
+  border: 1px solid black;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.bodynav .right .br {
+  border: 1px solid black;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* SALES AND OFFERS SECTION */
+.offer {
+  background: lightblue;
+  padding: 10px;
+  width: 100vw;
+}
+
+.offer .offer-pics {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.offer .offer-pics img {
+  background: yellow;
+  height: 40px;
+  width: 60px;
+}
+
+/* Seller */
+.seller {
+  width:100%;
+  background:lightgreen;
+padding: 10px;
+}
+
+.seller .seller-pics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seller .seller-pics a {
+  background:red;
+  display:flex;
+}
+.contacts {
+  background:lightgrey;
+  display:flex;
+  justify-content: space-between;
+  padding:5px;
+}
+.contacts a{
+  border:1px solid black;
+  border-radius: 4px;
+  padding: 4px;
+  text-decoration: none;
+}
+.privacy{
+  background: #51ff41;
+  height:30px;
+  padding-top:2px;
+display:flex;
+justify-content: space-around
+;
+  }
+  .privacy a{
+    text-decoration: none;
+    }
+
+footer {
+  background:lightblue;
+  text-align: center;
+}
+
+    /*
+
+.
+#bodynav ul li{
+/*
+width:140px;
+height:30px;
+float:left;
+margin-left:90px;
+width: 100%;
+}
+
+#bodynav ul li ul li{
+  background-color: grey;
+  color:white;
+  margin-left:-40px;
+  border:1px solid white;
+}
+
+#bodynav img{
+ width:450%;
+}
+#offer{
+  margin-top: 450px;
+}
+#offer li{
+  width:120px;
+  height:40px;
+  display:inline-block;
+  margin-left: 90px;
+}
+#offer img{
+  width:150%;
+}
+#seller {
+  width: 100%;
+}
+#seller img{
+  width:200px;
+}
+#seller li{
+  width:200px;
+  height:40px;
+  float:left;
+  margin-left:80px;
+  margin-bottom:40px;
+
+}
+#contacts{
+  margin-top: 160px;
+  width: 100%;
+}
+#contacts li{
+  border-radius: 20%;
+  background-color: grey;
+  width: 140px;
+  height:40px;
+  display: inline-block;
+  font-weight:bold;
+  font-size:20px;
+  text-align:center;
+  line-height:40px;
+  margin-left: 40px;
+
+}
+#contacts{
+  clear:both;
+}
+#contacts li a{
+  color:white;
+  display:block;
+}
+
+#footer li{
+  background-color:transparent;
+  width:180px;
+  height:40px;
+  display:inline-block;
+  margin-left:65px;
+  text-align:center;
+  line-height:40px;
+
+}
+#footer li a{
+  color:red;
+
+}
+footer{
+  text-align: center;
+  font-style: italic;
+}
+@media and screen(max-width=600px){
+  #container{
+    width:100%;
+  }
+}
+*/

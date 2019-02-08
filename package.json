@@ -1,0 +1,26 @@
+{
+  "name": "dream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/somaisuraj/dream.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/somaisuraj/dream/issues"
+  },
+  "homepage": "https://github.com/somaisuraj/dream#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "handlebars": "^4.1.0",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.10",
+    "nodemon": "^1.18.9"
+  }
+}

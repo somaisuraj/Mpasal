@@ -1,0 +1,81 @@
+/*  this section is for navbar */
+.banner img {
+  width: 100%;
+}
+/* for navbar */
+.navigation{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgrey;
+  margin-bottom: 10px;
+}
+.navigation li, a{
+  list-style: none;
+  text-decoration:none;
+  width:100px;
+  color: black;
+}
+/*  this section is for main body */
+#body-block {
+  width: 100%;
+  
+  display: flex;
+
+}
+.body{
+  width:20%;
+  padding-bottom: 90px;
+}
+.body2{
+flex-grow: 1;
+background-color: green;
+background-image: url("../images/slidehead2.jpg");
+background-size: cover;
+margin-right: 10px
+}
+
+.body-right img{
+  width: 100%;
+  background-color: orange;
+}
+/* This section is for the sales and offer section */
+.sales {
+  width: 100%;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+}
+.sales img{
+  width: 150px;
+  border: 2px solid black;
+}
+/* This section is for Official seller  */
+.sellers {
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sellers img {
+  width: 100px;
+  border: 2px solid black;
+}
+/* info  section */
+#info {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#info a{
+  width:200px;
+  background-color: silver;
+  text-align: center;
+}
+/* this is last copyright line */
+footer {
+  margin-top: 5px;
+  text-align: center;
+}
