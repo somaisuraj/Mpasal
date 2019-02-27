@@ -19,7 +19,8 @@
   "homepage": "https://github.com/somaisuraj/dream#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "handlebars": "^4.1.0",
+    "hbs": "^4.0.2",
+    "html": "^1.0.0",
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.10",
     "nodemon": "^1.18.9"
