@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/somaisuraj/dream.git"
   },
+  "engines": {
+    "node": "10.14.1"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
