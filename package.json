@@ -21,11 +21,13 @@
   },
   "homepage": "https://github.com/somaisuraj/dream#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "hbs": "^4.0.2",
     "html": "^1.0.0",
     "mongodb": "^3.1.13",
-    "mongoose": "^5.4.10",
+    "mongoose": "^5.4.16",
     "nodemon": "^1.18.9"
   }
 }
