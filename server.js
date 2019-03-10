@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   res.render('Dream project(mpasal)v1.1.hbs');
 });
 
+app.post('/search/:query', (req, res) => {
+  
+});
+
 app.get('/contacts', (req, res) => {
   res.render('contacts us & About');
 });
