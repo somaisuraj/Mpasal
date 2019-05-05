@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
-
+const jwt = require('jsonwebtoken');
 let UserSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -42,61 +42,52 @@ let UserSchema = new mongoose.Schema({
   }]
 
 });
+UserSchema.methods.generateAuthToken = function () {
+  let user = this;
+  let access = 'auth';
+  let token = jwt.sign({_id: user.id.toHexString(), access}, 'shristi').toString();
+  user.tokens.push({access, token});
 
+  return user.save().then(() => {
+   return token;
+  });
 
-// UserSchema.pre('save', function (next) {
-//    var user = this;
-//    if(user.isModified('password')) {//password is key so when its key value is modeified then this function runs
-//      let hash = bcrypt.hashSync(user.password, 10);
-//           user.password = hash;
-//           next();
-//    }
-//     next();
-//      });
-// UserSchema.statics.findByCredentials = function (email, password) {
-//     let User = this;
-//     return User.findOne({email}).then((user) => {
-//     //   if (!user) {
-//     //     return Promise.reject();// this need more clarification
-//     //   }
-//     //   return new Promise((resolve, reject) => {
-//     //     bcrypt.compare(password, user.password, (err, res) => {
-//     //          if (res) {
-//     //            resolve(user);
-//     //          }else {
-//     //            reject();
-//     //          }
-//     //     });
-//     //   });
-//       //<<<
-//       if (user) {
-//         return bcrypt.compare(password, user.password, (err, res) => {
-//           if (err) {
-//              return err;
-//           } return user;
-//         });
-//       }  return Promise.reject();
-//       // //>>>>>>>
-//       });
-// };
-//<<<<<>>>>>>
+};
+
 UserSchema.statics.findByCredentials = function (email, password) {
 let User = this;
-return User.findOne({ email }).then((user) => {
-if (!user) {
-return Promise.reject("User was not found");
-}
+return new Promise((resolve, reject) => {
+User.findOne({ email }).then((user) => {
+if (!user)
+return reject("User was not found");
+
 bcrypt.compare(password, user.password, (err, res) => {
-if (err) {
-return Promise.reject("Password did not match");
-} else {
-return Promise.resolve(user);
-}
+if (res) {
+  resolve(user);
+
+} return reject("Password did not match");
+});
 });
 });
 };
-///<<<<<>>>>>
 
+// UserSchema.statics.findByCredentials = function (email, password) {
+// let User = this;
+// return User.findOne({ email }).then((user) => {
+// if (!user) {
+//   return Promise.reject("User was not found");
+// }
+// return new Promise((resolve, reject) => {
+// bcrypt.compare(password, user.password, (err, res) => {
+// if (res) {
+//   resolve(user);
+// }
+//  return reject("Password did not match");
+// });
+// });
+// });
+// };
+///<<<<<>>>>>
 
 UserSchema.pre('save', function (next) {
   var user = this;
@@ -104,7 +95,7 @@ UserSchema.pre('save', function (next) {
       bcrypt.genSalt(10, (err, salt) => {//here you write any numbers high number means more secure
         bcrypt.hash(user.password, salt, (err, hash) => {
           user.password = hash;
-          user.confirmPassword = hash;//I am just using the hashed value because I have already validated the passwoed in post route
+          // user.confirmPassword = hash;//I am just using the hashed value because I have already validated the passwoed in post route
           next();
         });
       });

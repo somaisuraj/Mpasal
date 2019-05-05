@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs');
 const bodyParser = require('body-parser');//without this req.body is unavailable
+const _ = require('lodash');
+
 
 
 const {mongoose} = require('./db/mongoose.js');
@@ -18,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/search/:query', (req, res) => {
-  
+
 });
 
 app.get('/contacts', (req, res) => {
@@ -26,18 +28,16 @@ app.get('/contacts', (req, res) => {
 });
 
 //<<<login>>
-app.post('/login', (req, res) => {
-  // User.findOne({email:req.body.email}).then((user) => {//when using findOne parameter should be object
-  //   res.render('user', user);
-  //
-  // })
-  User.findByCredentials(req.body.email,req.body.password).then((user) => {//this return variable is object and has all access to key and values--
-     res.render('user', user);//--as a result it is loading its name value inside browser.
-     console.log(user);
-     console.log(user.password);
-  }).catch((e) => {
-    res.send(e);
-  });
+app.post('/login',async (req, res) => {
+  try {
+  let body = _.pick(req.body, ['email', 'password']);
+  let user = await User.findByCredentials(body.email, body.password);
+  let token = await user.generateAuthToken();
+  res.send(user);
+  console.log(user);
+  } catch (e) {
+     res.status(400).send(e);
+  }
 });
 app.get('/login', (req, res) => {
   res.render('login');
