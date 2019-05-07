@@ -32,9 +32,7 @@ app.post('/login',async (req, res) => {
   try {
   let body = _.pick(req.body, ['email', 'password']);
   let user = await User.findByCredentials(body.email, body.password);
-  let token = await user.generateAuthToken();
-  res.send(user);
-  console.log(user);
+  res.send(_.pick(user, ['name', 'email', 'gender']));
   } catch (e) {
      res.status(400).send(e);
   }
@@ -74,8 +72,7 @@ app.post('/singleSignup', (req, res) => {
       res.render('registeredUser', {
         name: user.name,
         email: user.email
-      });
-      res.redirect('Dream project(mpasal)v1.1', 200);
+      })
     }).catch ((e) => {
       res.send(e);
     });

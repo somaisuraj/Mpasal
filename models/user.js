@@ -57,7 +57,7 @@ UserSchema.methods.generateAuthToken = function () {
 UserSchema.statics.findByCredentials = function (email, password) {
 let User = this;
 return new Promise((resolve, reject) => {
-User.findOne({ email }).then((user) => {
+User.findOne({email}).then((user) => {
 if (!user)
 return reject("User was not found");
 
@@ -71,22 +71,7 @@ if (res) {
 });
 };
 
-// UserSchema.statics.findByCredentials = function (email, password) {
-// let User = this;
-// return User.findOne({ email }).then((user) => {
-// if (!user) {
-//   return Promise.reject("User was not found");
-// }
-// return new Promise((resolve, reject) => {
-// bcrypt.compare(password, user.password, (err, res) => {
-// if (res) {
-//   resolve(user);
-// }
-//  return reject("Password did not match");
-// });
-// });
-// });
-// };
+
 ///<<<<<>>>>>
 
 UserSchema.pre('save', function (next) {
