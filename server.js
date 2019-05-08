@@ -4,11 +4,10 @@ const hbs = require('hbs');
 const bodyParser = require('body-parser');//without this req.body is unavailable
 const _ = require('lodash');
 
-
-
+require('./config/config');
 const {mongoose} = require('./db/mongoose.js');
 const {User} = require('./models/user.js');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'hbs');// this is separate hbs and need to assign to render hbs file type
