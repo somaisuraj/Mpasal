@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet " type="text/css" href="styles/userDashboard.css" />
+
+  <title>DashBoard</title>
+</head>
+
+<body
+  <div class="description">
+    <div class="navigation">
+      <h3>Welcome back!! {{email}} </h3>
+      <a href="/logout">logout</a>
+      <!-- <button type="button" name="button" onclick="logout()">logout</button> -->
+    </div>
+
+    <p>This is your personal dashboard. You can see your carts, purchase history, track
+      your orders and many more. So feel free to expolore your dashboard. If you find
+      any problems realted to your dashboard then please let us know immediately.
+      ThankYou. Mpasal(Made in Nepal)</p>
+  </div>
+  <div class="main-content">
+    <div class="history">
+      <ul>
+        <li>completed {{counter}}</li>
+        <li>Pending Payment {{counter}}</li>
+        <li>Pending Delivery {{counter}}</li>
+        <li>Refund{{counter}}</li>
+      </ul>
+    </div>
+    <div class="seperater">
+      <div class="wishList">
+        <h2>Your Wishlist</h2>
+        <ul>
+          <li>This is your personal dashboard. You can see your carts, purchase history, track
+            your orders and many more. So feel free to expolore your dashboard. If you find
+            any problems realted to your dashboard then please let us know immediately.
+            ThankYou. Mpasal(Made in Nepal</li>
+        </ul>
+      </div>
+      <div class="advertisement">
+        <img src="" alt="Adding soon">
+        <img src="" alt="Adding soon">
+      </div>
+    </div>
+
+
+  </div>
+  {{> info}}
+ {{> footer}}
+</body>
+
+</html>

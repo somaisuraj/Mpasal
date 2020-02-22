@@ -1,0 +1,54 @@
+
+.navigation{
+  display: flex;
+  justify-content:space-between;
+}
+
+.main-content {
+  /* background: pink; */
+  display:flex;
+
+  /* display: grid;
+  "history wishList"
+  "history advertisement" */
+}
+.history {
+  /* background: blue; */
+  width: 40%;
+  margin-right: 5px;
+
+}
+.history > ul {
+  width: 70%;
+  /* background: green; */
+  margin-left: -15px;
+}
+li {
+  padding: 10px;
+  list-style: none;
+  border-bottom-style: solid;
+  border-color: black;
+}
+.seperater {
+  /* background: orange; */
+}
+
+.wishList {
+  /* background: red; */
+}
+.advertisement {
+  /* background: lightgrey; */
+    width: 35%;
+}
+#info{
+    display:flex;
+    justify-content: space-between;
+}
+#info > a {
+  text-decoration: none;
+}
+/* this is last copyright line */
+footer {
+  margin-top: 15px;
+  text-align: center;
+}

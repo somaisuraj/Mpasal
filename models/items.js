@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
-let itemSchema = new mongoose.Schema({
+let ItemSchema = new mongoose.Schema({
   name: {
     type: String;
-    requo
+    required: true;
   },
-  description:{
-
+  category:{
+    type: String;
+    required: true;
   }
 });
-let Item = mongoose.model('item', itemSchema);
+let Item = mongoose.model('item', ItemSchema);

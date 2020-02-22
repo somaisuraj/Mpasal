@@ -2,10 +2,12 @@
   "test": {
     "PORT":3000,
     "MONGODB_URI":"mongodb://localhost:27017/UserTest",
+    "JWT_SECRET":"sds$56Fg^wgCd4a@6c^4ffasfasr"
+
   },
   "development": {
     "PORT": 3000,
-    "MONGODB_URI":"mongodb:localhost:27017/User"
-
+    "MONGODB_URI":"mongodb://localhost:27017/User",
+    "JWT_SECRET":"sds$56Fg^wgCd4a@6c^4"
   }
 }

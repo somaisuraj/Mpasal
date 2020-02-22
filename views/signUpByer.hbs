@@ -9,17 +9,19 @@
 <body>
   <div class="container">
     <h3>Already a member? <a href="/login">Sign in!</a></h3>
+    {{> errors}}
+
     <div class="forms">
       <form action="/singleSignup" method="POST">
         <!-- needs same url as get so it could send that url data -->
-          E-mail address:<input type="email"  name="email" required/><br>
-          Name: <input type="text"  name="name" required /><br>
-          Middle Name: <input type="text" name=""/><br>
-          Last Name:  <input type="text" /><br>
-          password:<input type="password" name="password" required/><br>
-          confirm password: <input type="password" name="confirmPassword"/><br>
-         <input type="radio" name="gender" value="male"/>male<br>   <!--here we define value because val is constant -->
-          <input type="radio" name="gender" value="female"/>female<br>
+          E-mail address:<input type="email"  name="email" value="{{email}} " required/><br>
+          <!-- Name: <input type="text"  name="name" required /><br> -->
+          <!-- Middle Name: <input type="text" name=""/><br>
+          Last Name:  <input type="text" /><br> -->
+          password:<input type="password" name="password" value="{{password}}"required/><br>
+          confirm password: <input type="password" name="confirmPassword" value="{{confirmPassword}}" required/><br>
+         <!-- <input type="radio" name="gender" value="male"/>male<br>   <!--here we define value because val is constant -->
+          <!-- <input type="radio" name="gender" value="female"/>female<br> -->
           date of birth(year only):<input type="number" value="1990" name="birthDate" required /><br>
         <input type="checkbox"  required/>I agree with all the <a href="#">terms and conditions </a><br>
         <input type="submit" value="submit" />
