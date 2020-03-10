@@ -8,6 +8,10 @@ router.post('/search/:query', (req, res) => {
 
 });
 
+router.get('/nepali', (req, res) => {
+  res.render('Dream project nep v1.1.hbs');
+});
+
 router.get('/contacts', (req, res) => {
   res.render('contacts us & About');
 });

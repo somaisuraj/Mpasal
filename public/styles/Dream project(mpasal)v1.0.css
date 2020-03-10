@@ -1,5 +1,9 @@
 /*  this section is for navbar */
-
+h5 {
+  background-color: skyblue;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .banner img {
   width: 100%;
 }

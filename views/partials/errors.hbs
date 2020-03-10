@@ -1,5 +1,9 @@
 <div>
-  {{#each errors}}
-  <h6> {{msg}}</h6>
-{{/each}}
+  {{#if errors}}
+   {{#each errors}}
+     <h4> {{msg}}</h4>
+   {{/each}}
+ {{else}}
+    <h4> {{res.locals.success_msg}}</h4>
+{{/if}}
 </div>

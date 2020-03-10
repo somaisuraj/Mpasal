@@ -24,7 +24,7 @@ router.post('/singleSignup', async(req, res) => {
        errors, email, password, confirmPassword, birthDate
      });
    } else {
-     let user = await User.findOne({email:email});
+     let user = await User.findOne({email});
      if(user) {
        errors.push({msg:'user already exists'});
        res.render('signUpByer', {
@@ -36,6 +36,9 @@ router.post('/singleSignup', async(req, res) => {
        });
        user.save().then(user => {
          req.flash('success_msg', 'you are now registerd and can log in');
+         console.log('I am at the middle')
+         console.log(res.locals.success_msg);
+
          res.redirect('/login');
        })
        .catch(err => console.log(err));
