@@ -15,6 +15,10 @@ router.get('/nepali', (req, res) => {
 router.get('/contacts', (req, res) => {
   res.render('contacts us & About');
 });
+
+router.get('/contactnepali', (req, res) => {
+  res.render('contacts us & About nepV');
+})
 //<<<login>>
 
 //<<<>>>>//
