@@ -16,7 +16,7 @@ router.get('/contacts', (req, res) => {
   res.render('contacts us & About');
 });
 
-router.get('/contactnepali', (req, res) => {
+router.get('/contactsnepV', (req, res) => {
   res.render('contacts us & About nepV');
 })
 //<<<login>>
