@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <head>
+    <link type="text/css" rel="stylesheet" href="login.css">
+  </head>
+  <div id="cointainer">
+    <h1>
+      Mपसल
+      जी नेपाल बनाऊदै
+    </h1>
+    <div class="buyer">
+
+      <form action="/login" method="post" id="login">
+        इमेल:<input type="email" name="email" required /><br>
+        गाेप्य शब्द:<input type="password" name="password" required/><br>
+        <button type="submit">लग इन</button>
+      </form>
+    </div>
+    <div class="forgot">
+      <div class="left">
+        <a href="#">गाेप्य शब्द बिर्सियाे ?</a>
+      </div>
+      <div class="right">
+        <a href="#">इमेल बिर्सियाे ?</a>
+      </div>
+    </div>
+    <div class="home"> <a href="/nepali">घर</a></div>
+    <div class="signup">दर्ता छैन !<a href="/singleSignup nepV">यहाँ थिच्नुहाेस् </a></div>
+    <div class="helper">
+          <a href="#">सहायता</a>
+          <a href="#">सम्पर्क गर्नुहाेस</a>
+          <a href="#">नियम र सर्तहरू</a>
+      </div>
+    </div>
+  </div>
+  {{> footer_nepV }}
+</body>
+
+</html>

@@ -75,6 +75,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get('/loginnepV', (req, res) => {
+  res.render('login nepV');
+});
+
 router.get('/logout', (req, res) => {
   req.logout();
   req.flash('success_msg', 'you are logged out');
@@ -90,12 +94,17 @@ router.get('/singleSignup', (req, res) => {
   res.render('signUpByer');
 });
 
+router.get('/singleSignupnepV', (req, res) => {
+  res.render('signUpByer nepV');
+});
+
 router.get('/sellerSignup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/registeredUser', (req, res) => {
-   res.render('registeredUser');
- });
+router.get('/sellerSignupnepV', (req, res) => {
+  res.render('signup nepV');
+});
+
 
 module.exports = router;

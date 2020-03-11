@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet " type="text/css" href="styles/userDashboard.css" />
+
+  <title>ड्यासबाेर्ड</title>
+</head>
+
+<body
+  <div class="description">
+    <div class="navigation">
+      <h3>स्वागतम्!! {{email}} </h3>
+      <a href="/logout">लग आउट</a>
+      <!-- <button type="button" name="button" onclick="logout()">logout</button> -->
+    </div>
+
+    <p>याे हजुरकाे नीजि ड्यासबाेर्ड हाे। यहाँबाट हजुर आफ्नाे ठेला, खरिद इतिहास , अर्डर आदि हेर्न सकिन्छ। त्यसैले आफ्नाे ड्यासबाेर्ड नहिचकिचाइ हेर्नुहाेस।
+      केहि समस्या आइपरेमा तत्काल थाहा दिनुहाेला। धन्यवाद ।
+      ThankYou. Mpasal(Made in Nepal)</p>
+  </div>
+  <div class="main-content">
+    <div class="history">
+      <ul>
+        <li>पूरा भएकाे {{counter}}</li>
+        <li>भुक्तानी बाँकी {{counter}}</li>
+        <li>वितरण बाँकी {{counter}}</li>
+        <li>फिर्ती{{counter}}</li>
+      </ul>
+    </div>
+    <div class="seperater">
+      <div class="wishList">
+        <h2>Your Wishlist</h2>
+        <ul>
+          <li>याे हजुरकाे नीजि ड्यासबाेर्ड हाे। यहाँबाट हजुर आफ्नाे ठेला, खरिद इतिहास , अर्डर आदि हेर्न सकिन्छ। त्यसैले आफ्नाे ड्यासबाेर्ड नहिचकिचाइ हेर्नुहाेस।
+            केहि समस्या आइपरेमा तत्काल थाहा दिनुहाेला। धन्यवाद ।
+            ThankYou. Mpasal(Made in Nepal)</li>
+        </ul>
+      </div>
+      <div class="advertisement">
+        <img src="" alt="Adding soon">
+        <img src="" alt="Adding soon">
+      </div>
+    </div>
+
+
+  </div>
+  {{> info}}
+ {{> footer_nepV}}
+</body>
+
+</html>
